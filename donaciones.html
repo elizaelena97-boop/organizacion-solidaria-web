@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <title>Donaciones - Organización Solidaria</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f2f7f4;
+      color: #16382c;
+    }
+
+    header {
+      background: #14634b;
+      color: white;
+      padding: 45px 20px;
+      text-align: center;
+    }
+
+    main {
+      max-width: 850px;
+      margin: 35px auto;
+      padding: 0 20px;
+    }
+
+    .tarjeta {
+      background: white;
+      padding: 25px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px #00000012;
+    }
+
+    h2 { color: #14634b; }
+
+    select, button {
+      padding: 12px;
+      width: 100%;
+      margin-top: 10px;
+      border-radius: 7px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background: #14634b;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover { background: #0c4937; }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Organización Solidaria</h1>
+    <p>Tu ayuda puede transformar vidas</p>
+  </header>
+
+  <main>
+    <section class="tarjeta">
+      <h2>Nuestros proyectos</h2>
+      <h3>Apoyo a familias</h3>
+      <p>
+        Entregamos alimentos y artículos esenciales
+        a familias que necesitan apoyo.
+      </p>
+
+      <h3>Educación comunitaria</h3>
+      <p>
+        Desarrollamos actividades educativas
+        para niños y jóvenes.
+      </p>
+    </section>
+
+    <section class="tarjeta">
+      <h2>Realiza una donación</h2>
+      <p>Selecciona el monto que deseas aportar.</p>
+
+      <form id="formDonacion">
+        <label for="monto">Monto de donación:</label>
+
+        <select id="monto" required>
+          <option value="">Selecciona un monto</option>
+          <option value="5000">$5.000</option>
+          <option value="10000">$10.000</option>
+          <option value="20000">$20.000</option>
+        </select>
+
+        <button type="submit">
+          Simular donación
+        </button>
+      </form>
+
+      <p>
+        Demostración académica:
+        no se realizan cobros reales.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    Organización Solidaria - Proyecto educativo
+  </footer>
+
+  <script>
+    document.getElementById("formDonacion")
+      .addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const monto =
+          document.getElementById("monto").value;
+
+        alert(
+          "Simulación realizada. Monto: $" + monto +
+          ". No se ha efectuado ningún cobro."
+        );
+      });
+  </script>
+</body>
+</html>
